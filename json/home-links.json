@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "dwes",
+      "description": "Desarrollo Web Entorno Servidor",
+      "imgUrl": "imgs/php.png"
+    },
+    {
+      "name": "dwec",
+      "description": "Desarrollo Web Entorno Cliente",
+      "imgUrl": "imgs/javascript.png"
+    },
+    {
+      "name": "android",
+      "description": "Android",
+      "imgUrl": "imgs/android.png"
+    },
+    {
+      "name": "diw",
+      "description": "Diseño Interfaces Web",
+      "imgUrl": "imgs/diw.png"
+    }
+  ]
+}

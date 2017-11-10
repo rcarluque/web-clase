@@ -1,0 +1,34 @@
+.contenido {
+  margin-bottom: 10%;
+}
+
+.alineacion {
+  text-align: left;
+}
+
+.carpetas {
+  width: 18%;
+  background-color: rgba(71, 142, 170, 0.93);
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  /* arriba; derecha; abajo; izquierda */
+  margin: 0px 0px 10px 10px;
+}
+
+.carpetas:hover {
+  background-color: rgba(96, 177, 209, 0.93);
+  transition:all .4s ease-in-out;
+}
+
+.img-folder {
+  vertical-align: middle;
+}
+
+.enlaces-folders {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  display: inline;
+  padding: 20px;
+}

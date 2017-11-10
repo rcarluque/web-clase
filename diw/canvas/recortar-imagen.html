@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <script type="text/javascript">
+    var contexto;
+
+		window.onload = function(){
+      let contexto = cargaContextoCanvas("canvas");
+      if (contexto) {
+        let img = new Image();
+        img.src = "img/personas.png";
+        img.onload = function() {
+          // Imagen original
+          contexto.drawImage(img,0,0);
+          // Imagen; X; Y; la parte a cortar desde x; la parte a cortar desde Y;  
+          // posición dónde colocar la imagen X2 (izquierda - derecha), posición dónde colocar la imagen Y2 (arriba - abajo); 
+          // escalado en pixeles (anchura), escalado en pixeles (altura).
+          contexto.drawImage(img, 420, 200, 80, 200, 120, 400, 80, 200);
+          contexto.drawImage(img, 250, 0, 80, 200, 220, 400, 80, 200);
+        }
+      }
+		}
+
+    function cargaContextoCanvas(idCanvas) {
+      let elemento = document.getElementById(idCanvas);
+      if(elemento && elemento.getContext) {
+        let contexto = elemento.getContext('2d');
+        if (contexto) {
+          return contexto;
+        }
+      }
+      return FALSE;
+    }
+
+	</script>
+</head>
+<body>
+  
+	<canvas id="canvas" height="1000" width="1000">
+		No soporta la API de HTML5 de Canvas
+	</canvas>
+
+</body>
+</html>

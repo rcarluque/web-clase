@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <script type="text/javascript">
+    var contexto;
+
+		window.onload = function(){
+      let contexto = cargaContextoCanvas("canvas");
+      if (contexto) {
+        let r = 150;
+        let x = 100;
+        let y = 100;
+        contexto.lineWidth = 5;
+        // un angulo de 60deg.
+        let rad = ( Math.PI / 180 ) * 60;
+        contexto.beginPath();
+        for( var i = 0; i<6; i++ ){
+          x = x + r * Math.cos( rad*i );
+          y = y + r * Math.sin( rad*i );
+          contexto.lineTo(x, y);
+        }
+        contexto.closePath();
+
+         // gradiente lineal diagonal
+        var gradienteLineal = contexto.createLinearGradient(x, y, 380, 200); 
+        gradienteLineal.addColorStop(0, 'rgb(255,0,0)');
+        gradienteLineal.addColorStop(0.5, '#fff');
+        gradienteLineal.addColorStop(1, 'rgb(136, 183, 238)');
+        contexto.fillStyle = gradienteLineal;
+        contexto.fill(); 
+
+
+      }
+		}
+
+    function cargaContextoCanvas(idCanvas) {
+      let elemento = document.getElementById(idCanvas);
+      if(elemento && elemento.getContext) {
+        let contexto = elemento.getContext('2d');
+        if (contexto) {
+          return contexto;
+        }
+      }
+      return FALSE;
+    }
+
+	</script>
+</head>
+<body >
+	<canvas id="canvas" height="1000" width="1000">
+		No soporta la API de HTML5 de Canvas
+	</canvas>
+
+</body>
+</html>

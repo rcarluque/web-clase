@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rafael Carmona Luque</title>
+<script src="js/show-div.js"></script>
+
+<style>
+
+  body {
+    font-family: sans-serif;
+  }
+
+  .ejercicio {
+    margin: 20px;
+  }
+
+  .titulo {
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+  }
+
+  .titulo:hover {
+    color: rgb(66, 155, 73);
+  }
+
+  .example {
+    background-color: rgb(233, 213, 255);
+    padding: 15px;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- Ejercicio 1 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise1')">
+      1. ¿Cuántos constructores tiene el objeto predefinido Date()? Explícalos mediante ejemplos.
+    </a>
+    
+    <div id="exercise1" style="display: none;">
+      <p>El objeto Date() tiene 4 constructores.</p>
+      <ol>
+        <li> <b>new Date()</b>
+          <ul>
+            <li>Crea un nuevo objeto Date() con la fecha y hora actual.</li>
+          </ul>
+          <div class="example">
+            let d = new Date(); <br>
+            document.open(); <br>
+            document.write(d); <br>
+            document.close(); <br>
+            <hr>
+            <script>
+              {
+                let d = new Date();
+                document.open();
+                document.write(d);
+                document.close();
+              }
+            </script>
+          </div>
+        </li> 
+        <li> <b>new Date(milisegundos)</b>
+          <ul>
+            <li>Crea un nuevo objeto Date() cómo un tiempo de 0 más el número, en milisegundos.</li>
+          </ul>
+          <div class="example">
+              let d = new Date(86400000); <br>
+              document.open(); <br>
+              document.write(d); <br>
+              document.close(); <br>
+              <hr>
+              <script>
+                {
+                  let d = new Date(86400000);
+                  document.open();
+                  document.write(d);
+                  document.close();
+                }
+              </script>
+            </div>
+        </li>
+        <li> <b>new Date(dateString)</b> creates a new date object from the specified date and time:
+          <ul>
+              <li>Crea un nuevo objeto Date() con la fecha y hora espeficificada.</li>
+          </ul>
+          <div class="example">
+            let d = new Date("October 13, 2014 11:13:00"); <br>
+            document.open(); <br>
+            document.write(d); <br>
+            document.close(); <br>
+            <hr>
+            <script>
+              {
+                let d = new Date("October 13, 2014 11:13:00");
+                document.open();
+                document.write(d);
+                document.close();
+              }
+            </script>
+          </div>
+        </li>
+        <li> <b>new Date(año, mes, días, horas, minutos, segundos, milisegundos)</b>
+          <ul>
+              <li>Crea un nuevo objeto Date() con la fecha y hora especificadas.</li>
+          </ul>
+          <div class="example">
+            let d = new Date(99,5,24,11,33,30,0); <br>
+            document.open(); <br>
+            document.write(d); <br>
+            document.close(); <br>
+            <hr>
+            <script>
+              {
+                let d = new Date(99,5,24,11,33,30,0);
+                document.open();
+                document.write(d);
+                document.close();
+              }
+            </script>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Ejercicio 2 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise2')">
+      2. Indica la utilidad de Date.now();
+    </a>
+    
+    <div id="exercise2" style="display: none; margin: 10px;">
+      <ul>
+        <li>Date.now()
+          <ul>
+            <li>Devuelve el valor numérico correspondiente a la hora actual.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="example">
+        let d = Date.now(); <br>
+        document.open(); <br>
+        document.write(d); <br>
+        document.close(); <br>
+        <hr>
+        <script>
+          {
+            let d = Date.now();
+            document.open();
+            document.write(d);
+            document.close();
+          }
+        </script>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 3 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise3')">
+      3. Indica el formato del parámetro cadena del método Date.parse().
+    </a>
+      
+    <div id="exercise3" style="display: none; margin: 10px;">
+      <p>El método parse toma una cadena con una fecha en inglés (como por ejemplo, "<i>Dec 25, 1995</i>", o 
+        "<i>Mon, 25 Dec 1995 13:30:00 GMT</i>") y devuelve el número de milisegundos desde las 00:00:00 del 1 de enero de 1970 (hora local).</p>
+      <div class="example">
+        let d = Date.now(); <br>
+        document.open(); <br>
+        document.write(d); <br>
+        document.close(); <br>
+        <hr>
+        <script>
+          {
+            let d = Date.parse("Dec 25, 1995");
+            document.open();
+            document.write(d);
+            document.close();
+          }
+        </script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 4 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise4')">
+      4. Implementa el método esFecha() que devuelva si el argumento es una fecha o no.
+    </a>
+    
+    <div id="exercise4" style="display: none; margin: 10px;">
+      <div class="example">
+        <p>
+          let esFecha = function(fecha) { <br>
+            &nbsp;return (fecha instanceof Date) ? "el valor es una fecha" : "el valor no es una fecha"; <br>
+          } <br>
+        </p>
+        <script src="js/ejercicio4.js"></script>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 5 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise5')">
+      5. Crea el método incrementaDias() que incremente/decremente los días indicados.
+    </a>
+    
+    <div id="exercise5" style="display: none; margin: 10px;">
+      <p>Admitirá como primer argumento un entero positivo/negativo que reperesente el número de días. El resto de argumentos representarán una fecha, similar a los argumentos del constructor Date(). </p>
+      <div class="example">
+        <p>
+          let incrementaDias = function(cantidad, fecha) { <br>
+            &nbsp;let dia = fecha.getDay() + cantidad; <br>
+            &nbsp;fecha.setDate(dia); <br>
+            &nbsp;return fecha; <br>
+          } <br>
+        </p>
+        <script src="js/ejercicio5.js"></script>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 6 -->
+  <div class="ejercicio">
+      
+      <a class="titulo" href="#" onclick="show('exercise6')">
+        6. Implementa el método diaDeLaSemana() que devuelva 'lunes, martes... domingo' del día actual o de la fecha indicada.
+      </a>
+      
+      <div id="exercise6" style="display: none; margin: 10px;">
+        <div class="example">
+          <p>
+            let diaDeLaSemana = function(fecha) {<br>
+              &nbsp;if(fecha == null){<br>
+                &nbsp;&nbsp;fecha = new Date();<br>
+              &nbsp;}<br>
+              <br>
+              &nbsp;switch(fecha.getDay()) {<br>
+                &nbsp;&nbsp;case 0:<br>
+                  &nbsp;&nbsp;&nbsp;return "Domingo";<br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 1:<br>
+                  &nbsp;&nbsp;&nbsp;return "Lunes";<br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 2:<br>
+                  &nbsp;&nbsp;&nbsp;return "Martes";<br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 3:<br>
+                  &nbsp;&nbsp;&nbsp;return "Miércoles"; <br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 4:<br>
+                  &nbsp;&nbsp;&nbsp;return "Jueves";<br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 5:<br>
+                  &nbsp;&nbsp;&nbsp;return "Viernes";<br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 6:<br>
+                  &nbsp;&nbsp;&nbsp;return "Sábado";<br>
+                  &nbsp;&nbsp;&nbsp;break;<br>
+              &nbsp;}<br>
+            }<br>
+          </p>
+          <hr>
+          <script src="js/ejercicio6.js"></script>
+        </div>
+      </div>
+      
+    </div>
+
+  <!-- Ejercicio 7 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise7')">
+      7. Implementa el método esBisiesto() que devuelva si una fecha/año es bisiesto o no.
+    </a>
+    
+    <div id="exercise7" style="display: none; margin: 10px;">
+      <p>En caso de que el argumento no sea una fecha, que salte una excepción. 
+        Admitirá tantos parámetros como el constructor Date(). 
+        Pruébalo con varias invocaciones fallidas (y capturadas)</p>
+      <div class="example">
+
+        let esBisiesto = function(fecha) { <br>
+          &nbsp;if(fecha instanceof Date) return (fecha.getYear() % 4 == 0) ? 
+          "El año es bisiesto" : "El año no es bisiesto"; <br>
+          &nbsp;else return "La fecha no es un objeto Date."; <br>
+        } <br>
+        <hr>
+        <script src="js/ejercicio7.js"></script>
+
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 8 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise8')">
+      8. Implementa el método calcularEdad() que devuelva la edad indicando la fecha de nacimiento.
+    </a>
+    
+    <div id="exercise8" style="display: none; margin: 10px;">
+      <p>En caso de tener menos de un año, indicar días y meses transcurridos. Indicar errores.</p>
+
+      <form>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" />
+        <input type="button" id="calcular_edad" value="Calcular edad" />
+      </form>
+
+      <script src="js/ejercicio8.js"></script>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 9 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise9')">
+      9. Implementa el método calcularHastaFinDeAnno() que devuelva los días que quedan hasta fin de año
+    </a>
+    
+    <div id="exercise9" style="display: none; margin: 10px;">
+      <div class="example">
+        let calcularHastaFinDeAnno = function() { <br>
+          &nbsp;let hoy = new Date(); <br>
+          &nbsp;let anoNuevo = new Date(hoy.getFullYear(), 11, 31); <br>
+          &nbsp;anoNuevo.setDate(anoNuevo.getDate() + 1); <br>
+          <br>
+          &nbsp;let diasDif = anoNuevo.getTime() - hoy.getTime(); <br>
+          &nbsp;let dias = Math.round(diasDif/(1000 * 60 * 60 * 24)); <br>
+          <br>
+          &nbsp;return dias;<br>
+        }<br>
+        <hr>
+        <script src="js/ejercicio9.js"></script>
+
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>

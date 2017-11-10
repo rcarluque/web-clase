@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rafael Carmona Luque</title>
+<script src="js/show-div.js"></script>
+
+<style>
+
+  @font-face { font-family: Roboto; src: url('Roboto.ttf'); } 
+
+  body {
+    font-family: Roboto;
+  }
+
+  .ejercicio {
+    margin: 20px;
+  }
+
+  .titulo {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: black;
+  }
+
+  .titulo:hover {
+    -webkit-box-shadow: 0px 4px 6px -1px rgba(189,189,189,1);
+    -moz-box-shadow: 0px 4px 6px -1px rgba(189,189,189,1);
+    box-shadow: 0px 4px 6px -1px rgba(189,189,189,1);
+  }
+
+  .example {
+    background-color: rgb(233, 213, 255);
+    padding: 15px;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+  <h1>Listado arrays en JavaScript</h1>
+
+  <!-- Ejercicio 1 -->
+  <div class="ejercicio">
+
+    <a class="titulo" href="#" onclick="show('exercise1')">
+      1. Indica los tres argumentos del método forEach a un array. Demuestra su uso mediante un ejemplo.
+    </a>
+
+    <div id="exercise1" style="display: none;">
+      <p>NOMBREARRAY.forEach(function(currentValue, index, array) { -ITERACION- });</p>
+      <ol>
+        <li> <b>currentValue</b>
+          <ul>
+              <li>Requerido. El elemento actual siendo procesado en el array.</li>
+          </ul>
+        </li> 
+        <li> <b>index</b>
+          <ul>
+              <li>Opcional. El índice del elemento actual siendo procesado en el array.</li>
+          </ul>
+        </li>
+        <li> <b>array</b>
+          <ul>
+              <li>Opcional. El objeto de matriz al que pertenece el elemento actual.</li>
+          </ul>
+        </li>
+      </ol>
+      <!-- Ejemplo del ejercicio 1. -->
+      <div class="example">
+        <script src="js/ejercicio1.js"></script>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ejercicio 2 -->
+  <div class="ejercicio">
+
+    <a class="titulo" href="#" onclick="show('exercise2')">
+      2. Indica la utilidad del operador in con los arrays. Demuestra su uso mediante un ejemplo.
+    </a>
+
+    <div id="exercise2" style="display: none;">
+      <p>El operador <i>in</i> devuelve true si la propiedad especificada está en el objeto especificado.
+      Su utilidad en un array puede ser para comprobar que realmente se ha eliminado un obejeto del array. Por ejemplo:</p>
+      
+      <!-- Ejemplo del ejercicio 2. -->
+      <div class="example">
+        <script src="js/ejercicio2.js"></script>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ejercicio 3 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise3')">
+      3. Indica la función que comprueba si un objeto es o no un Array. Demuestra su uso mediante un ejemplo.
+    </a>
+      
+    <div id="exercise3" style="display: none;">
+      <p>Array.isArray(objeto) es una función de javascript que devuelve true en caso de que el objeto sea un array</p>
+      
+      <!-- Ejemplo del ejercicio 3. -->
+      <div class="example">
+        <script src="js/ejercicio3.js"></script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 4 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise4')">
+      4. Crea  una función que cree un array de la dimensión indicada, cuyo contenido sean los números naturales comenzando desde 0
+    </a>
+      
+    <div id="exercise4" style="display: none;">
+      <button onclick="crear()" style="margin: 20px;">Crea un array</button>
+      <div class="example">
+        <script src="js/ejercicio4.js"></script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 5 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise5')">
+      5. Crea una función que devuelva un array con cada uno de los argumentos.
+    </a>
+      
+    <div id="exercise5" style="display: none;">
+      <div class="example">
+        <script src="js/ejercicio5.js"></script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 6 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise6')">
+      6. Crea  una función que devuelva un array con cada uno de los argumentos. En caso de que alguno de sus argumentos sea un array, que introduzca sus elementos uno a uno.
+    </a>
+      
+    <div id="exercise6" style="display: none;">
+      <div class="example">
+        <script src="js/ejercicio6.js"></script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 7 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise7')">
+      7. Crea una función que elimine todos los undefined de un array.
+    </a>
+      
+    <div id="exercise7" style="display: none;">
+      <div class="example">
+        <script src="js/ejercicio7.js"></script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 8 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise8')">
+      8. Indica la diferencia entre los siguientes métodos, y demuestra su uso con algunos arrays:
+    </a>
+    <div id="exercise8" style="display: none;">
+      <ul>
+        <li> <b>Array.prototype.forEach()</b>
+          <ul>
+              <li>El método forEach() ejecuta una función por cada uno de los elementos del array.</li>
+          </ul>
+        </li> 
+        <li> <b>Array.prototype.every()</b>
+          <ul>
+              <li>El método every() verifica si TODOS los elementos del array cumplen con la condición introducida. Devuelve true o false.</li>
+          </ul>
+        </li>
+        <li> <b>Array.prototype.some()</b>
+          <ul>
+              <li>El método some() verifica si ALGÚN elemento del array cumple con la condición introducida. Devuelve true o false.</li>
+          </ul>
+        </li>
+        <li> <b>Array.prototype.filter()</b>
+          <ul>
+              <li>El método filter() devuelve un array con todos los elementos que cumplan con la condición asignada.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="example">
+        <script src="js/ejercicio8.js"></script>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Ejercicio 9 -->
+  <div class="ejercicio">
+      
+    <a class="titulo" href="#" onclick="show('exercise9')">
+      9. verigua qué método es el más eficiente para manejarse con arrays. Compruébalo mediante performance.now() o similares
+    </a>
+      
+    <div id="exercise9" style="display: none;">
+      <div class="example">
+        <script src="js/ejercicio9.js"></script>
+      </div>
+    </div>
+      
+  </div>
+  
+
+</body>
+</html>

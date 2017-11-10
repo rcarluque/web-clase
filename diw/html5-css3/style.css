@@ -1,0 +1,65 @@
+nav {
+  border: 1px solid;
+  border-width: 1px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav li {
+  display: inline;
+  border: 1px solid;
+  padding: 7px;
+}
+nav a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: black;
+}
+
+main {
+  height: 570px;
+}
+
+article {
+  width: 75%;
+  float: left;
+  border-right: 1px solid;
+}
+
+.left-bar {
+  float: right;
+  height: 100%;
+  width: 22%;
+}
+
+section {
+  border: 1px solid;
+  margin: 40px;
+}
+
+section p {
+  padding: 7px;
+  margin: 7px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+section h2 {
+  border-bottom: 1px solid;
+  margin: 4px 0px 5px 0px;
+  padding: 10px;
+}
+
+aside {
+  border: 1px solid;
+  padding: 0px 40px 40px 40px;
+  margin: 70px;
+}
+
+footer {
+  border-top: 1px solid;
+  border-width: 1px 0;
+  display: block;
+  height: 100%;
+}

@@ -1,0 +1,127 @@
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.contenedor {
+  min-height: 100%;
+}
+
+/* Divs de Cabecera y contenido */
+
+.cabecera {
+  width: 100%;
+  display: table;
+}
+
+main {
+  height: 100%;
+  margin-top: 5%;
+}
+
+/** Letras **/
+
+.letras{
+  display: table-cell;
+  position: relative;
+  text-align: right;
+  padding-right: 3%;
+}
+
+.text-daw {
+  font-size: 6em;
+  color: rgba(71, 142, 170, 0.93);
+  font-family: 'Finger Paint', cursive;
+}
+
+.text-rcl {
+   position: absolute;
+   width: 500px;
+   font-size: 4em;
+   top: 60px;
+   left: 25px;
+   border: none;
+   color: rgba(68, 67, 67, 0.96);
+   font-family: 'Marvel', sans-serif;
+}
+
+/** PARTE DE PIE **/
+
+footer {
+  display: table;
+  margin-top: 5%;
+  background-color: rgba(71, 142, 170, 0.93);
+  -webkit-box-shadow: inset 0px 1px 10px 0px rgba(166,168,168,1);
+  -moz-box-shadow: inset 0px 1px 10px 0px rgba(166,168,168,1);
+  box-shadow: inset 0px 1px 10px 0px rgba(166,168,168,1);
+}
+
+footer a {
+	font-size: 0.8em;
+	color: #383736;
+}
+
+.datos-contacto {
+	display: table-cell;
+  width: 40%;
+  padding: 20px;
+}
+
+.datos-contacto h5 {
+  margin-bottom: 10px;
+}
+
+.datos-contacto p {
+	font-size: 0.8em;
+	color: #ffffff;
+  margin: 4px;
+}
+
+.datos-contacto a {
+	font-size: 1em;
+	color: #1f1f1f;
+}
+
+.licencias {
+  display: table-cell;
+  width: 40%;
+  padding: 20px;
+}
+
+.licencias h5 {
+	margin-bottom: 0px;
+	border-bottom: 1px solid #dadada;
+}
+
+.licencias > article {
+  font-size: 0.7em;
+  color: #ffffff;
+}
+
+
+/**** Configuramos las letras para una visualización más pequeña ***/
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  /** Letras **/
+
+  .letras{
+    position: relative;
+  }
+
+  .text-daw {
+    font-size: 3.7em;
+  }
+
+  .text-rcl {
+    width: 300px;
+    font-size: 2.2em;
+    top: 45px;
+    left: -50px;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <script type="text/javascript">
+    var contexto;
+
+		window.onload = function(){
+      let contexto = cargaContextoCanvas("canvas");
+      if (contexto) {
+
+        function drawCircle(x, y, color){
+          let r = 75;
+          contexto.strokeStyle = color;
+          contexto.lineWidth = 5;
+          contexto.arc(x, y, r, 0, 2*Math.PI);
+          contexto.stroke();
+        }
+
+        drawCircle(200, 200, "orange");
+        drawCircle(285, 290, "red");
+        drawCircle(380, 200, "blue");
+        
+      }
+		}
+
+    function cargaContextoCanvas(idCanvas) {
+      let elemento = document.getElementById(idCanvas);
+      if(elemento && elemento.getContext) {
+        let contexto = elemento.getContext('2d');
+        if (contexto) {
+          return contexto;
+        }
+      }
+      return FALSE;
+    }
+
+	</script>
+</head>
+<body >
+	<canvas id="canvas" height="800" width="800">
+		No soporta la API de HTML5 de Canvas
+  </canvas>
+  
+</body>
+</html>

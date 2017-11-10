@@ -1,0 +1,18 @@
+#HAY QUE ACTIVAR ALLOWOVERRIDE ALL
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+#Activar RewriteEngine
+RewriteEngine on
+
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^folder/(.*)$ index.php?folder=$1 [L]
+RewriteRule ^file/(.*)$ index.php?file=$1.php [L]
+
+</IfModule>

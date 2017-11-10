@@ -1,0 +1,41 @@
+/** Menu **/
+
+a {
+	text-decoration: none;
+}
+
+nav {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* Quitamos estilos predeterminados de la etiqueta UL (margen, relleno, estilo de lista y tamaño de letra)  */
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  height: 50px;
+}
+
+/* Añadimos estilo a los enlaces */
+nav li a{
+  display: block;
+  color: rgba(66, 66, 66, 0.94);
+  height: 30px;
+  width: auto;
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 0.9em;
+}
+
+nav li a:hover{
+  border-bottom: 5px solid rgba(98, 98, 98, 0.64);
+}
+
+nav > li > a:active {
+  border-bottom: 5px solid rgba(142, 139, 139, 0.64);
+}

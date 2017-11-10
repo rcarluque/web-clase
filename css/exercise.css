@@ -1,0 +1,30 @@
+main {
+  text-align: center;
+}
+
+.show-code {
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: 0px;
+}
+
+.show-code:hover {
+  -webkit-box-shadow: 2px 2px 6px -1px rgba(102,102,102,1);
+  -moz-box-shadow: 2px 2px 6px -1px rgba(102,102,102,1);
+  box-shadow: 2px 2px 6px -1px rgba(102,102,102,1);
+}
+
+#div-code {
+  margin: 30px;
+  text-align: left;
+  display: none;
+  background-color: rgba(235, 233, 233, 0.91);
+  color: #f1f1f1;
+  padding: 10px 16px;
+  border-radius: 2px;
+  border-top: 4px solid #00aeef;
+  -moz-box-shadow: inset 0 0 10px #000;
+  box-shadow: inset 0 0 10px #000;
+}

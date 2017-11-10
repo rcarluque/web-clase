@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rafael Carmona Luque</title>
+  <script type="text/javascript">
+    var contexto;
+
+		window.onload = function(){
+      let contexto = cargaContextoCanvas("canvas");
+      if (contexto) {
+
+        let img = new Image();
+        img.src = "diw/canvas/img/hadouken.png";
+        img.onload = function() {
+          // Imagen original
+          contexto.drawImage(img, 0, 140, 240, 312);
+        }
+
+        let x = 225;
+        let y = 185;
+
+         setInterval(function() {
+          // Movemos la imagen sumando i
+          x++;
+          // Cuando la x sea igual al maximo, reiniciamos
+          if (x == 950) x = 225;
+
+          contexto.clearRect(225, 185, 960, 185);
+
+          contexto.fillStyle = "#86BEF6";
+          contexto.fillRect(x, y, 80, 80);  
+
+        }, 1000/850);
+
+      }
+		}
+
+    function cargaContextoCanvas(idCanvas) {
+      let elemento = document.getElementById(idCanvas);
+      if(elemento && elemento.getContext) {
+        let contexto = elemento.getContext('2d');
+        if (contexto) {
+          return contexto;
+        }
+      }
+      return FALSE;
+    }
+
+	</script>
+</head>
+<body>
+	<canvas id="canvas" height="1000" width="1000">
+		No soporta la API de HTML5 de Canvas
+	</canvas>
+
+</body>
+</html>

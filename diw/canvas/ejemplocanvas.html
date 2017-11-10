@@ -1,0 +1,20 @@
+<head>
+	<title></title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("canvas");
+			if(canvas && canvas.getContext){
+				var contexto = canvas.getContext('2d');
+				if(contexto){
+					contexto.fillRect(0, 0, 150, 160);
+					contexto.fillStyle = '#cc00ff';
+					contexto.fillRect(0, 0, 100, 70);
+				}
+			}
+		}
+	</script>
+</head>
+
+<canvas id="canvas" width="300" height="200">
+		No soporta la API de HTML5 de Canvas
+</canvas>

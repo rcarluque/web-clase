@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rafael Carmona Luque</title>
+<script src="js/show-div.js"></script>
+
+<style>
+
+  .ejercicio {
+    margin: 20px;
+  }
+
+  .titulo {
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+  }
+
+  .titulo:hover {
+    color: rgb(66, 155, 73);
+  }
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- Ejercicio 3 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise3')">
+      3. Crea una página web con el siguiente comportamiento:
+    </a>
+    
+    <div id="exercise3" style="display: none;">
+      <ol>
+        <li> Un botón "bajar línea" para bajar una línea. </li> 
+        <li> Un botón "subir línea" para subir una línea </li>
+        <li> Un botón "bajar" para bajar una página. </li>
+        <li> Un botón "subir" para subir una página. </li>
+        <li> Un botón "inicio" para ir al inicio del documento. </li>
+        <li> Un botón "fin" para ir al final del documento. </li>
+      </ol>
+      <button id="button3">Crear página</button>
+      <script src="js/ejercicio3.js"></script>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 4 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise4')">
+      4. Mi URL. Crea una página que te muestre debidamente desglosada la url. (servidor, protocolo, ruta...)
+    </a>
+    
+    <div id="exercise4" style="display: none; margin: 10px;">
+      <button id="button4">Crear página URL</button>
+      <script src="js/ejercicio4.js"></script>
+    </div>
+    
+  </div>
+
+  <!-- Ejercicio 5 -->
+  <div class="ejercicio">
+    
+    <a class="titulo" href="#" onclick="show('exercise5')">
+      5. Reloj. Crea una página que cada segundo te muestre actualizado un reloj digital del tipo "22:14:09 h"
+    </a>
+    
+    <div id="exercise5" style="display: none; margin: 10px;">
+      <button id="button5">Crear página Reloj</button>
+      <script src="js/ejercicio5.js"></script>
+    </div>
+    
+  </div>
+
+</body>
+</html>
