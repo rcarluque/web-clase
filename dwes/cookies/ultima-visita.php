@@ -6,10 +6,6 @@
  * Description: Comprueba la última visita del usuario al sitio.
  */
 
-  if(isset($_COOKIE['AboutVisit'])) { 
-    $last = $_COOKIE['AboutVisit']; 
-  }
-
   $output;
   if(isset($_COOKIE['visitas'])) { 
     $ultima = $_COOKIE['visitas']; 
