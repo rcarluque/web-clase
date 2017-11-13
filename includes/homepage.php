@@ -11,7 +11,7 @@
   foreach($data['data'] as $key => $val){ 
 
     echo "<div class='contenido-lenguajes'>
-      <a href='/folder/".$val['name']."'>
+      <a href='/folder/".$val['name']."/'>
         <img class='img-lenguajes' src='".$val['imgUrl']."'/>
         <div class='overlay'>
           <div class='text-lenguajes'>".$val['description']."</div>

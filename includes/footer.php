@@ -4,7 +4,7 @@
     <p>Rafael Carmona Luque</p>
     <p><b>Población:</b> Montalbán de Córdoba</p>
     <p><b>Correo:</b> <a href="mailto:rcarluque@gmail.com?Subject=Mail%20from%20rafaweb" target="_top">rcarluque@gmail.com</a></p>
-    <p><b>Github:</b> <a href="#" target="_blank">Rafa Carmona</a></p>
+    <p><b>Github:</b> <a href="https://github.com/rcarluque" target="_blank">Rafa Carmona</a></p>
   </section>
 
   <section class="licencias">

@@ -12,7 +12,7 @@ RewriteBase /
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
-RewriteRule ^folder/(.*)$ index.php?folder=$1 [L]
-RewriteRule ^file/(.*)$ index.php?file=$1.php [L]
+RewriteRule ^folder/(.*)/$ index.php?folder=$1 [L]
+RewriteRule ^folder/(.*)/file/(.*)$ index.php?folder=$1&file=$2.php [L]
 
 </IfModule>

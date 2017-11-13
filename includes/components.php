@@ -12,7 +12,6 @@
               ) {
                   continue;
               } else if ($directorio . '/' . $file) {
-                $direccion = $directorio."/".$file;
                 array_push($direcciones, $directorio."/".$file);
               }
           }   
